@@ -14,10 +14,9 @@ use App\Http\Controllers\ExpenditureController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', function () { return view('welcome');});
 
 Route::get('/dashboard', [ExpenditureController::class, 'dashboard'])->middleware(['auth'])->name('dashboard');
+Route::get('/graphic', [ExpenditureController::class, 'graphic'])->middleware(['auth'])->name('graphic');
 
 require __DIR__.'/auth.php';

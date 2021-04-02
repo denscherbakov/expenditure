@@ -22,7 +22,7 @@ class ExpenditureSeeder extends Seeder
                 'sum' => mt_rand(10, 1000),
                 'category_id' => mt_rand(1, 5),
                 'user_id' => 1,
-                'created_at' => Carbon::now()->format('Y-m-' . mt_rand(1, 28) . ' h:i:s'),
+                'created_at' => Carbon::now()->format('Y-m-' .rand(1, 28).' '.rand(1, 12).':'.rand(1, 59).':s'),
             ]);
         }
     }
